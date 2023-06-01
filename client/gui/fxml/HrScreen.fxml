@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="510.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.controllers.ControllerFX_HRScreen">
+   <children>
+      <Pane prefHeight="89.0" prefWidth="606.0" style="-fx-background-color: #FF5700;">
+         <children>
+            <Label layoutX="258.0" layoutY="45.0" prefHeight="34.0" prefWidth="90.0" style="-fx-font-size: 20; -fx-text-fill: white; -fx-font-weight: bold;" text="Hello, HR" />
+            <Pane prefHeight="33.0" prefWidth="606.0" style="-fx-background-color: #E64A19;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Button fx:id="buttonSignOut" layoutX="525.0" layoutY="2.0" mnemonicParsing="false" onAction="#doSignOut" prefHeight="19.0" prefWidth="75.0" style="-fx-background-color: #E64A19; -fx-font-weight: bold; -fx-font-size: 14;" text="sign out" />
+                  <Button fx:id="buttonGoBack" layoutY="2.0" mnemonicParsing="false" onAction="#doGoBack" prefHeight="19.0" prefWidth="75.0" style="-fx-background-color: #E64A19; -fx-font-weight: bold; -fx-font-size: 14;" text="back" />
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane prefHeight="414.0" prefWidth="606.0">
+         <children>
+            <TabPane fx:id="tabPane" layoutX="25.0" layoutY="15.0" prefHeight="384.0" prefWidth="556.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="waitForApproval" text="wait for approval">
+                     <content>
+                        <AnchorPane prefHeight="328.0" prefWidth="546.0">
+                           <children>
+                              <TableView fx:id="Table" prefHeight="263.0" prefWidth="556.0">
+                                 <columns>
+                                    <TableColumn fx:id="workerID" prefWidth="75.0" text="worker ID" />
+                                    <TableColumn fx:id="workerName" prefWidth="75.0" text="worker name" />
+                                    <TableColumn fx:id="workerPhone" prefWidth="97.59996032714844" text="worker phone" />
+                                    <TableColumn fx:id="workerEmail" prefWidth="101.5999755859375" text="worker email" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <Button fx:id="ApproveBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="288.0" mnemonicParsing="false" onAction="#aproveRequest" prefHeight="35.0" prefWidth="134.0" style="-fx-background-radius: 100PX; -fx-background-color: #ffca28; -fx-text-fill: #33691e;" text="approve request">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="DeclineBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="315.0" layoutY="288.0" mnemonicParsing="false" onAction="#declineRequest" prefHeight="35.0" prefWidth="134.0" style="-fx-background-radius: 100PX; -fx-background-color: #ffca28; -fx-text-fill: #d50000;" text="decline request">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Label fx:id="errorMsg" layoutX="260.0" layoutY="321.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="approvedTable" text="approved">
+                     <content>
+                        <AnchorPane fx:id="anocherPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="approvedUsersTable" prefHeight="263.0" prefWidth="556.0">
+                                <columns>
+                                  <TableColumn fx:id="approvedWorkerID" prefWidth="120.80005264282227" text="worker ID" />
+                                  <TableColumn fx:id="approvedWorkerName" minWidth="0.0" prefWidth="148.80003356933594" text="worker name" />
+                                    <TableColumn fx:id="approvedWorkerPhone" minWidth="0.0" prefWidth="129.60003662109375" text="worker phone" />
+                                    <TableColumn fx:id="approvedWorkerEmail" minWidth="0.0" prefWidth="156.7999267578125" text="worker email" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="remove" alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="285.0" mnemonicParsing="false" onAction="#removeFromApproved" prefHeight="35.0" prefWidth="134.0" style="-fx-background-radius: 100PX; -fx-background-color: #ffca28; -fx-text-fill: #d50000;" text="remove">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</VBox>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="510.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="89.0" prefWidth="606.0" style="-fx-background-color: #FF5700;">
+         <children>
+            <Pane layoutY="-2.0" prefHeight="33.0" prefWidth="606.0" style="-fx-background-color: #E64A19;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Button layoutX="525.0" layoutY="2.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="75.0" style="-fx-background-color: #E64A19; -fx-font-weight: bold; -fx-font-size: 14;" text="sign out" />
+                  <Button layoutY="2.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="75.0" style="-fx-background-color: #E64A19; -fx-font-weight: bold; -fx-font-size: 14;" text="back" />
+               </children>
+            </Pane>
+            <Label layoutX="217.0" layoutY="45.0" style="-fx-font-size: 20; -fx-text-fill: white; -fx-font-weight: bold;" text="Italian restaurants" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane prefHeight="414.0" prefWidth="606.0">
+         <children>
+            <Button layoutX="532.0" layoutY="343.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="39.0" style="-fx-background-radius: 100PX; -fx-background-color: #ffca28;">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../shopping-cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <GridPane layoutX="58.0" layoutY="75.0" prefHeight="311.0" prefWidth="465.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.20001220703125" minWidth="10.0" prefWidth="65.79998779296875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.40002441406247" minWidth="10.0" prefWidth="242.40002441406247" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="101.5999755859375" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="90.39999237060547" minHeight="10.0" prefHeight="90.39999237060547" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="90.39999237060547" minHeight="10.0" prefHeight="26.99999389648437" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="96.79998779296875" minHeight="10.0" prefHeight="95.00000610351563" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="96.79998779296875" minHeight="10.0" prefHeight="20.199987792968756" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="89.59998168945313" minHeight="10.0" prefHeight="70.80001220703122" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="VIVIVO" />
+                  <Label text="Fat Vini" GridPane.rowIndex="2" />
+                  <Label text="Reffaello" GridPane.rowIndex="4" />
+                  <ImageView fitHeight="59.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@../../../../vivino.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="65.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@../../../../fat%20vini.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="67.0" fitWidth="207.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <image>
+                        <Image url="@../../../../refaello.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="58.0" style="-fx-background-radius: 100PX; -fx-background-color: #ffca28;" text="menu" GridPane.columnIndex="2">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="58.0" style="-fx-background-radius: 100PX; -fx-background-color: #ffca28;" text="menu" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="58.0" style="-fx-background-radius: 100PX; -fx-background-color: #ffca28;" text="menu" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Separator prefWidth="178.0" GridPane.rowIndex="1" />
+                  <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Separator prefWidth="200.0" GridPane.rowIndex="3" />
+                  <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </GridPane>
+            <ScrollBar layoutX="592.0" layoutY="4.0" orientation="VERTICAL" prefHeight="414.0" prefWidth="14.0" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
