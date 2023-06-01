@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.gui.ServerMainWindowController">
+   <children>
+      <Label layoutX="40.0" layoutY="35.0" text="Server Status: " />
+      <Circle fx:id="indicatorServerStatus" fill="#ff1f1f" layoutX="25.0" layoutY="44.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <TextField fx:id="txtServerStatus" alignment="CENTER" editable="false" focusTraversable="false" layoutX="167.0" layoutY="31.0" prefHeight="25.0" prefWidth="118.0" text="STOPPED" />
+      <Line endX="154.0" layoutX="130.0" layoutY="108.0" startX="-114.0" />
+      <Label layoutX="25.0" layoutY="75.0" text="Clients Connected:" />
+      <TextField fx:id="txtClientsConnected" alignment="CENTER" editable="false" focusTraversable="false" layoutX="167.0" layoutY="71.0" prefHeight="25.0" prefWidth="118.0" text="0" />
+      <Label layoutX="111.0" layoutY="8.0" text="Server Status:" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="117.0" text="DB Connection Settings:" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonStartServer" layoutX="15.0" layoutY="380.0" mnemonicParsing="false" onAction="#doStartServer" prefHeight="25.0" prefWidth="100.0" text="Start Server" underline="true" />
+      <TextField fx:id="inputTxtSchemaName" layoutX="136.0" layoutY="144.0" promptText="default: prototype" />
+      <TextField fx:id="inputTxtUserName" layoutX="136.0" layoutY="175.0" promptText="default: root" />
+      <Label layoutX="27.0" layoutY="148.0" text="Schema Name:" />
+      <Label layoutX="27.0" layoutY="179.0" text="User Name:" />
+      <Label layoutX="27.0" layoutY="212.0" text="User Password:" />
+      <Button fx:id="buttonStopServer" layoutX="15.0" layoutY="449.0" mnemonicParsing="false" onAction="#doStopServer" prefHeight="25.0" prefWidth="100.0" text="Stop Server" />
+      <Button fx:id="buttonOpenLog" layoutX="187.0" layoutY="380.0" mnemonicParsing="false" onAction="#doOpenLog" prefHeight="25.0" prefWidth="100.0" text="Open Log" />
+      <Button fx:id="buttonQuit" layoutX="237.0" layoutY="449.0" mnemonicParsing="false" onAction="#doQuit" prefHeight="25.0" prefWidth="50.0" text="Quit" />
+      <Line endX="154.0" layoutX="130.0" layoutY="251.0" startX="-114.0" />
+      <Label layoutX="74.0" layoutY="260.0" text="Server Connection Settings" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputTxtServerPort" layoutX="136.0" layoutY="285.0" promptText="default: 5555" />
+      <Label layoutX="27.0" layoutY="289.0" text="Server Port:" />
+      <CheckBox fx:id="chkboxDefaultValues" layoutX="17.0" layoutY="352.0" mnemonicParsing="false" onAction="#doFillDefault" text="Fill-in Default Values" />
+      <PasswordField fx:id="inputTxtPassword" layoutX="136.0" layoutY="208.0" promptText="no help here &gt;:|" />
+      <Label fx:id="labelShowMessage" alignment="CENTER" layoutX="1.0" layoutY="480.0" prefHeight="17.0" prefWidth="300.0" />
+      <Button fx:id="buttonServerListening" disable="true" layoutX="15.0" layoutY="414.0" mnemonicParsing="false" onAction="#doServerListening" prefHeight="25.0" prefWidth="100.0" text="Stop Listening" />
+   </children>
+</AnchorPane>
