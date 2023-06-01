@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.debug.TempScreenControllerFx">
+   <children>
+      <VBox layoutX="-4.0" layoutY="-9.0" prefHeight="510.0" prefWidth="606.0">
+         <children>
+            <Pane prefHeight="198.0" prefWidth="601.0" style="-fx-background-color: #FF5700;">
+               <children>
+                  <Pane layoutY="7.0" prefHeight="33.0" prefWidth="606.0" style="-fx-background-color: #E64A19;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Pane prefHeight="296.0" prefWidth="606.0">
+               <children>
+                  <Label layoutX="77.0" layoutY="96.0" text="TEMP SCREEN">
+                     <font>
+                        <Font size="72.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</Pane>
